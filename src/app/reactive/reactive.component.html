@@ -1,0 +1,11 @@
+<p>reactive works!</p>
+<form [formGroup]="frm"  >
+<input type="text" name="fname" formControlName="fname"/>
+<span *ngIf="frm.controls.fname.touched && frm.controls.fname.errors?.['required']" class="alert alert-danger">fname Is mandatory </span>
+<input type="text" name="email" formControlName="email"/>
+<span *ngIf="frm.controls.email.errors?.['required']" class="alert alert-danger">Email Is mandatory </span>
+<span *ngIf="frm.controls.email.errors?.['minlength']" class="alert alert-danger">Email minum 2 chars </span>
+<span *ngIf="frm.controls.email.errors?.['maxlength']" class="alert alert-danger">Email has more chars than expected  </span>
+
+<button (click)="formval()">Click Me</button>
+</form>

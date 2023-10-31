@@ -1,0 +1,39 @@
+nav
+{
+    height: 100%;
+}
+.side-nav-button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+ 
+}
+.side-nav-button:hover
+{
+    background-color: blue;
+    border-radius: 30%;
+}
+
+.menu-list-item 
+{
+    font-size: 20px;
+    height: 25px;
+    width: 125px;
+    text-align: center;
+    line-height: 25px;
+    color:white;
+    font-weight: bold;
+
+
+
+}
+
+.menu-list-item:hover
+{
+    background-color: goldenrod;
+    border: solid 5px maroon;
+    height: 50px;
+}

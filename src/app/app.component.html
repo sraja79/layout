@@ -1,0 +1,19 @@
+
+<div class="container-fluid g-0">
+
+  <app-header (sideNavToggled)="sideNanStatusparent=$event;"></app-header>
+  <main>
+      <app-side-nav [sideNavStatus]="sideNanStatusparent" [ReadAppcompPropinSideNav]="parentProp_From_Appcomp"
+      [ngClass]="{'app-side-nav-open':sideNanStatusparent}"></app-side-nav>
+      
+      <div class="display-area p-3"[ngClass]="{'display-area-shrink':sideNanStatusparent}" > 
+          <span class="toprightCornor"><i class="fa-solid fa-home" (click)="Navigate()"></i></span>
+          <router-outlet></router-outlet>
+          <hr>
+          Copy rights on {{yr}}
+          <hr>
+      </div>
+           
+  </main>
+
+</div>

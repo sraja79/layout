@@ -1,0 +1,51 @@
+<p>bindings works!</p>{{getname()}}
+
+<div class="sessionTitle">Interpolation -String Binding </div>
+<span>{{name1}}</span>
+<hr/>
+
+<div class="sessionTitle">Property - Binding </div>
+<span [innerHtml]="name"></span>
+<button [disabled]="!flag" alt="ffff">click here</button><br/>
+<div [innerHtml]="name1"  style="background-color: yellow;"></div>
+<input type="text" [class]="bgcolor" [value]="name1"/>
+<hr/>
+
+<div class="sessionTitle">Event - Binding </div>
+
+<button (click)="changeName()">Click here</button><br/>
+<input (input)="item=applyCtrlValue($event)">{{item}}
+<br/>
+
+<button (click)="getName_eventBinding()">click</button><br/>
+Input Event :<input type="text" (input)="Myfunction($event)"/><br/>
+
+
+<hr class="end-line"/>
+
+<div class="sessionTitle">Two Way - Binding </div>
+Two way input Value<input type="text" [(ngModel)]="bgcolor"  /><br/>
+<hr class="end-line">
+
+<div class="sessionTitle">Ref - Binding </div>
+Enter your totalmark <input #id>
+<button (click)="GetAverage(id.value)">Find Average </button><br/>
+Eg4 Ref <button (click)="ReadRefVariable(id.value)">click</button><br/>
+<hr class="end-line">
+
+
+<p>*********************************************</p>
+
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+

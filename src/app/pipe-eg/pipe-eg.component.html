@@ -1,0 +1,70 @@
+
+<div class="sessionTitle"> Build in Pipe</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            Uppercase
+        </div>
+        <div class="col-6">
+            {{nameSmall|uppercase}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            Lowercase
+        </div>
+        <div class="col-6">
+            {{nameCaps|lowercase}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            Price
+        </div>
+        <div class="col-6">
+            {{price|currency:'INR'}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            Decimal
+        </div>
+        <div class="col-6">
+            {{pi|number:'3.2-4'}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            Date
+        </div>
+        <div class="col-6">
+            {{mydate|date|uppercase}}<br/>
+            {{mydate|date:"dd/MM/yyyy"}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            Percentage
+        </div>
+        <div class="col-6">
+            {{pi|percent:'3.2-4'}}<br/>
+        
+        </div>
+    </div>
+</div>
+
+<div class="sessionTitle"> Pure  Pipe</div>
+<p>{{ firstname|concate:lastname}}</p>
+
+<ul>
+    <li *ngFor="let user of users |filters:'Gender':'F'">
+       {{user.Name|uppercase }}
+    </li>
+</ul>
+
+
+

@@ -1,0 +1,25 @@
+img{
+    height: 120px;
+    width: auto;
+}
+
+.bgcoloryellow
+{
+background-color: yellow;
+font-weight: bold;
+color: red;
+}
+
+.bgcolorgray
+{
+background-color: gray;
+}
+
+.caps
+{
+   text-transform:uppercase ; 
+}
+
+.forecolor{
+color: red;
+}

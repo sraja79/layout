@@ -1,0 +1,46 @@
+<form #userRef="ngForm" (ngSubmit)="userDetails(userRef)">
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-6">First Name</div>
+            <div class="col-3">
+                <input type="text" required minlength="2" maxlength="18" name="ufName1"  #ufNameref="ngModel" ngModel>
+            </div>   
+      
+          <div *ngIf="ufNameref.touched && ufNameref.errors && ufNameref.errors['required']" class="alert alert-danger col-3">
+            First Name not be null
+           </div>
+         
+
+           <div *ngIf="ufNameref.touched  &&ufNameref.errors && ufNameref.errors['minlength']" class="alert alert-danger col-3">
+            First Name atleast has 2 chars
+           </div>
+           <div *ngIf="ufNameref.touched  &&ufNameref.errors && ufNameref.errors['maxlength']" class="alert alert-danger col-3">
+            First Name has more chars than expected
+           </div>
+        </div>
+
+        <div class="row"> 
+            <div class="col-6">Last Name </div>
+            <div class="col-6"><input type="text" name="ulName" class="form-control"  ngModel></div>
+        </div>
+        
+    </div>
+
+    <div class="row"> 
+        <div class="col-6">Email</div>
+        <div class="col-3">
+            <input type="text" email name="email"  #uemail="ngModel" ngModel>
+        </div>   
+  
+      <div *ngIf="uemail.touched && uemail.errors && uemail.errors['email']" ngClass=".ng-valid">
+       sdfdsfds emailfsdfsdfdsfdsf
+       </div>
+     
+       <div class="row"> 
+        <div class="col-6"> </div>
+        <div class="col-6"><input type="submit"></div>
+    </div>
+     
+    </div>
+</form>

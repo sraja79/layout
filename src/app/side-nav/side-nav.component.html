@@ -1,0 +1,37 @@
+<div class="side-nav-content">
+    
+    <ul class="nav-list"  [ngClass]="{'nav-list-open':sideNavStatus}" >
+
+        <li class="nav-list-item" *ngFor="let Sm of sideMenuList; let i=index" [ngClass]="{'nav-list-open':sideNavStatus}">
+
+            <i *ngIf="activemenu==Sm.menuName else close" class='fa-solid fa-book-open'></i>
+
+            
+            <span [routerLinkActive]="'active'" >
+                  <a [routerLink]="[Sm.actionUrl]" (click)="setActiveMenu(Sm.menuName)"
+                  
+                  >
+
+                    {{Sm.menuName}}</a>
+            </span> 
+           
+        </li>
+    </ul>
+    <div class="profile=logo dropend">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown">Users</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a [routerLink]="'Reguserlist'" class="dropdown-item" >Registered User List</a> </li>
+                    <li><a [routerLink]="'Reguser'" class="dropdown-item">User Details</a> </li>
+                    <li><a [routerLink]="'RegUserDtls'" class="dropdown-item" >Register User(Add)</a> </li>
+                </ul>
+            </li>
+        </ul>
+    
+    </div>
+
+    <ng-template #close><i class="fa-solid fa-book"></i></ng-template>
+</div>
+

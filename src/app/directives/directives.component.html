@@ -1,0 +1,63 @@
+
+<div class="sessionTitle">Strectural -Directives </div>
+<div class="sub-session-Title"> ngFor- Read the Array Values  </div>
+<div>
+    <ul>
+        <li *ngFor="let item of array">{{item}}</li>
+       
+    </ul>
+    <div class="sub-session-Title"> ngFor- Multiplication table of 2  </div>
+   
+<ul>
+ 
+    <li *ngFor="let item of mulTable;
+        let serial=index;
+        let isOddNumber=odd;
+        let isevennumber=even;
+        let f=first;
+        let l=last">
+
+        <span  [ngClass]="{'bgcoloryellow':isOddNumber,'bgcolorgray':isevennumber} ">
+             {{item}} x 2= {{item*2}}</span></li>
+        
+   
+</ul>
+</div>
+<hr class="end-line"/>
+
+
+<div class="sub-session-Title"> ngIf  </div>
+
+<div *ngIf="gender=='M';else Goto12">Male</div>
+
+<br/>
+<span>age</span> <!--<input type="text" [(ngModel)]="age">-->
+<input type="text" (input)="getAge(age1.value)"  #age1>
+
+<span *ngIf="age<18">Minor</span>
+<span *ngIf="age>18">Major</span><br/>
+
+
+<ng-template #Goto12>Female</ng-template>
+
+<div [ngSwitch]="gender">
+    <p *ngSwitchCase="'M'"> Male </p>
+    <p *ngSwitchCase="'F'"> FeMale </p>
+    <p *ngSwitchCase="'O'"> Other </p>
+</div>
+
+<div [ngClass]="'bgcoloryellow'">Change color****************</div>
+<div [ngClass]="'caps forecolor'"> Attribute Directive for ngClass with Array</div>
+<div [ngClass]="['caps', 'forecolor']"> Attribute Directive for ngClass with Array</div>
+<div [ngClass]="applyColor()">{{age}}</div>
+<div [ngClass]="gender=='M'?'bgcoloryellow':'bgcolorgray'">{{gender}}</div>
+
+
+<p [ngStyle]="{'background-color': 'green'}"> Green color</p>
+<p [ngStyle]="{'text-transform': 'uppercase','color': 'red'}"> Asoken</p>
+
+<div class="sessionTitle">Custom Directive (Attribute)</div>
+
+Custon bg backgrount <input type="text" appHighlight placeholder="It is mandatory field"/>
+<div class="sessionTitle">Custom Directive (strectural)</div>
+<div *appIsTrue="true"> Male </div>
